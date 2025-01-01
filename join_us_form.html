@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - One Ocean Beauty</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Playfair Display', serif;
+        }
+        .background::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('window.jpg') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.8;  /* 20% transparent */
+            z-index: -1;
+        }
+        .background {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.3);  /* 70% transparent */
+            padding: 90px 40px 40px;  /* Increased top padding for more space */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 600px;
+            position: relative;
+            color: #1e3a5f;  /* Dark blue font */
+        }
+        .form-container h1 {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            margin: 0;
+            font-size: 30px;
+            color: rgb(240, 239, 230);  /* White font for Join Us */
+        }
+        input, select, textarea {
+            width: 100%;
+            margin: 15px 0;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            color: #1e3a5f;  /* Dark blue font */
+            font-family: 'Playfair Display', serif;  /* Matching font */
+        }
+        textarea::placeholder {
+            font-family: 'Playfair Display', serif;
+            color: #1e3a5f;  /* Matching font and color */
+        }
+        .submit-btn {
+            background-color: transparent;  /* No fill color */
+            color: rgb(240, 239, 220);  /* White font for Submit */
+            padding: 10px 10px;
+            border: 2px solid #59687a;
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #4e5b6d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="form-container">
+            <h1>Join Us</h1>
+            <form>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <select name="referral" required>
+                    <option value="">How did you hear about us?</option>
+                    <option value="social-media">Social Media</option>
+                    <option value="friend">Friend</option>
+                    <option value="event">Event</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="interest" placeholder="What products are you most interested in?" required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
